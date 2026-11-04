@@ -52,7 +52,6 @@ def test_inverter_palavras_varias_palavras_numeros():
     resultado = inverter_texto(texto)
     assert resultado == "123123 é senha minha"
 
-# ---------- Exercício 4 ----------
 @patch("ap2.gerar_codigo")
 def test_criar_identificacao_mensagem(mock_gerar_codigo):
     mock_gerar_codigo.return_value = "USR-1234"
@@ -87,8 +86,6 @@ def test_criar_identificacao_nomes_diferentes(mock_gerar_codigo):
     assert resultado1 == "Usuário Alan cadastrado com código USR-9999."
     assert resultado2 == "Usuário Maria cadastrado com código USR-9999."
 
-
-# ---------- Exercício 5 ----------
 @patch("ap2.verificar_permissao")
 def test_acessar_sistema_com_permissao(mock_verificar_permissao):
     mock_verificar_permissao.return_value = True
@@ -121,8 +118,6 @@ def test_acessar_sistema_dois_cenarios(mock_verificar_permissao):
     assert resultado1 == "Acesso autorizado"
     assert resultado2 == "Acesso negado"
 
-
-# ---------- Exercício 6 ----------
 @patch("ap2.registrar_atendimento")
 @patch("ap2.obter_proximo_cliente")
 def test_atender_proximo_cliente_sucesso(mock_obter, mock_registrar):
