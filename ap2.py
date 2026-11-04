@@ -15,7 +15,6 @@ def classificar_produto(quantidade):
 def inverter_texto(texto):
     return (' '.join(texto.split()[::-1])).strip()
 
-# ---------- Exercício 4 ----------
 def gerar_codigo():
     return f"USR-{random.randint(1000, 9999)}"
 
@@ -23,8 +22,6 @@ def criar_identificacao(nome):
     codigo = gerar_codigo()
     return f"Usuário {nome} cadastrado com código {codigo}."
 
-
-# ---------- Exercício 5 ----------
 def verificar_permissao(usuario):
     usuarios_permitidos = ["admin", "carlos", "alan"]
     return usuario in usuarios_permitidos
@@ -35,11 +32,7 @@ def acessar_sistema(usuario):
     else:
         return "Acesso negado"
 
-
-# ---------- Exercício 6 ----------
-fila = ["Ana", "Bruno", "Carla"]
-
-def obter_proximo_cliente():
+def obter_proximo_cliente(fila):
     if len(fila) > 0:
         return fila.pop(0)
     return None
